@@ -1,0 +1,64 @@
+body, body * {
+    line-height: 1.1;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body main {
+    padding: 20px;
+}
+
+.caption {
+    --color: color-mix(in srgb, rgb(165, 147, 147) 50%, var(--color-text));
+    text-align: start;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+.label {
+    text-align: start;
+    font-size: 1rem;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+button.btn-theme {
+    --background: color-mix(in srgb, #3a66b2 50%, transparent); 
+    --border-color: color-mix(in srgb, #3a66b2 80%, transparent); 
+    color: white;
+    box-shadow: 0 0 10px -5px #3ab286;
+    background-color: var(--background);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 5px;
+    height: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+}
+
+button.btn-theme img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-grid{
+    padding: 0px 0;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    gap: 30px
+}
+
+img {
+    box-shadow: 0px 20px 10px -15px rgba(0, 0, 0, 0.2);
+}

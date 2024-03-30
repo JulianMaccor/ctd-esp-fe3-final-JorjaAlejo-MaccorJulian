@@ -1,0 +1,55 @@
+.Navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background: blue;
+    transition: background ease-in-out 0.2s 0.15s;
+    z-index: -1;
+}
+
+.Header:hover .Navbar {
+    --background : color-mix(in srgb, blue 65%, transparent);
+    background: var(--background);
+}
+
+.Routes {
+    display: flex;
+    list-style: none;
+}
+
+.Header {
+    position: relative;
+}
+
+.Routes li {
+    margin: 0 0.8rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+.Routes li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.Divider {
+    transition: 
+        width ease-in-out 0.2s,
+        box-shadow ease-in-out 0.2s 0.15s
+    ;
+}
+
+.Navbar:hover + .Divider {
+    --shadow-color: color-mix(in srgb, blue 45%, transparent);
+    width: 100%;
+    box-shadow: 0 -20px 40px 15px var(--shadow-color); 
+}
+
+.Navbar:hover + .Divider > * {
+    width: 45px;
+    height: 45px;
+}

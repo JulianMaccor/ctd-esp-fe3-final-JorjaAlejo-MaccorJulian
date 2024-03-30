@@ -1,0 +1,160 @@
+.Footer {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    padding: 5px 40px;
+    min-height: 70px;
+    background-color: blue;
+    border-top: 3px solid white;
+    overflow-y: hidden;
+    color: white;
+}
+
+
+.Student {
+    z-index: 1;
+    flex: 1;
+}
+
+.DH {
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo > img {
+    width: 200px;
+    margin: 0;
+}
+.Logo > p {
+    margin: 0;
+    padding-top: 0.7rem;
+}
+
+.SocialMedia {
+    padding-left: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.SocialMedia > a > img {
+    height: 20px;
+    aspect-ratio: 1/1;
+    transition: filter ease-in-out 0.3s;
+}
+
+.SocialMedia > a:hover > img {
+    filter: invert(50%) sepia(87%) saturate(415%) hue-rotate(122deg) brightness(110%) contrast(92%);
+}
+
+
+.Footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--color-rainbow-1);
+    z-index: -1;
+    border-radius: 50% 10% 20% 20%;
+    border-bottom-left-radius: 10% 45%;
+    transform: 
+    translateX(-50%)
+    rotateZ(45deg);
+}
+
+.Footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-rainbow-1);
+    z-index: -1;
+}
+
+.RainbowContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--color-rainbow-4);
+    z-index: -2;
+    border-radius: 50% 0% 0% 0%;
+    border-bottom-left-radius: 10% 15%;
+    transform: 
+        translateX(-60%)
+        translateY(10%)
+        rotateZ(15deg)
+    ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer{
+    transform: 
+        translateX(-100%)
+        translateY(10%)
+        rotateZ(10deg)
+    ;
+}
+
+.RainbowContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-rainbow-3);
+    z-index: 0;
+    border-radius: 50% 0% 0% 0%;
+    border-bottom-left-radius: 10% 25%;
+    transform: 
+        translateX(-10%)
+        translateY(-5%)
+        rotateZ(10deg)
+    ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer::before{
+    transform: 
+        translateX(0)
+        translateY(-15%)
+        rotateZ(20deg)
+    ;
+}
+
+.RainbowContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-rainbow-2);
+    z-index: 0;
+    border-radius: 50% 0% 0% 0%;
+    border-bottom-left-radius: 10% 35%;
+    transform: 
+        translateX(-10%)
+        translateY(-10%)
+        rotateZ(20deg)
+    ;
+    transition: transform ease-out 0.3s;
+}
+
+.Footer:has(.SocialMedia:hover) .RainbowContainer::after{
+    transform: 
+        translateX(15%)
+        translateY(-25%)
+        rotateZ(30deg)
+    ;
+}

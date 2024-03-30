@@ -1,0 +1,24 @@
+.Divider {
+    width: 90%;
+    height: 1px;
+    margin: 0 auto;
+}
+
+.Divider > * {
+    position: absolute;
+    bottom: 50%;
+    z-index: 10;
+    border-radius: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-50%) translateY(50%);
+    display: flex;
+    justify-content: center;
+    transition: width ease-in-out 0.15s 0.05s, height ease-in-out 0.15s 0.05s, box-shadow ease-in-out .15s 0.05s;
+}
+
+.Divider > * img {
+    filter: invert(50%) sepia(87%) saturate(415%) hue-rotate(122deg) brightness(110%) contrast(92%);
+    box-shadow: none;
+}

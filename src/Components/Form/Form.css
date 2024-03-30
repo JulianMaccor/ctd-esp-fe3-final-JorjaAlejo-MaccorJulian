@@ -1,0 +1,80 @@
+.form-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60%;
+    max-width: 400px;
+}
+
+.form-wrapper .form-errors {
+    font-size: 1.2rem;
+    text-align: center;
+    color: blue;
+}
+
+.form-wrapper .form-errors > * {
+    margin-top: 0.3rem;
+}
+
+.form-wrapper .form-success {
+    font-size: 1.2rem;
+    text-align: center;
+    color: blue;
+}
+
+.form-wrapper form {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+form label {
+    display: block;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+form input {
+    min-width: 250px;
+    display: block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid blue;
+    border-radius: 4px;
+    color: blue;
+}
+
+.App form input[type=submit] {
+    cursor: pointer;
+    min-width: auto;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+
+    transition: background ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.App form input[type=submit]:not([disabled]):hover {
+    background: blue;
+    color: white;
+}
+
+.App form input[disabled] {
+    cursor: auto;
+    min-width: auto;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.App.dark form input {
+    color: white;
+}

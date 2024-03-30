@@ -1,0 +1,41 @@
+.App {
+    --color-primary: #3a66b2;
+    --color-secondary: #3aa2b2;
+    --color-accent: #3ab286;
+    --color-background: #e1f0f4;
+    --color-paper: #d9faf0;
+    --color-text: #000000e5;
+
+    --color-rainbow-1: #3aa2b2;
+    --color-rainbow-2: #14ceb5;
+    --color-rainbow-3: #1dc734;
+    --color-rainbow-4: #1eb86b;
+    --color-rainbow-5: #3ab286;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-background);
+}
+
+.App:is(.dark) {
+    --color-primary: #4469a8;
+    --color-secondary: #13a3b9;
+    --color-accent: #06b474;
+    --color-background: #212427;
+    --color-paper: #6e9297;
+    --color-text: #ffffffe5;
+
+    --color-rainbow-1: #178899;
+    --color-rainbow-2: #0c7c6d;
+    --color-rainbow-3: #4b9454;
+    --color-rainbow-4: #3d8f66;
+    --color-rainbow-5: #3ab286;
+    background-color: var(--color-background);
+}
+
+.App > main {
+    flex-grow: 1;
+    display: flex;
+    overflow-y: auto;
+}
